@@ -4,7 +4,7 @@ terraform {
   required_providers {
     hcloud = {
       source  = "hetznercloud/hcloud"
-      version = "~> 1.46"
+      version = "~> 1.56"
     }
   }
 }
@@ -33,9 +33,10 @@ resource "hcloud_server" "mc" {
 }
 
 resource "hcloud_volume" "mc_vol" {
-  name   = "mc-vol"
-  size   = var.volume_size
-  format = "ext4"
+  name      = "mc-vol"
+  size      = var.volume_size
+  format    = "ext4"
+  server_id = hcloud_server.mc.id
 
   lifecycle {
     prevent_destroy = true

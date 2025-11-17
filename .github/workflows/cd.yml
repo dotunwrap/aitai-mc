@@ -27,6 +27,7 @@ jobs:
       - name: Deploy to Hetzner
         working-directory: infra/
         env:
+          TF_HTTP_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
           TF_VAR_hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
           TF_VAR_public_ssh_key: ${{ secrets.PUBLIC_SSH_KEY }}
           TF_VAR_private_ssh_key: ${{ secrets.PRIVATE_SSH_KEY }}

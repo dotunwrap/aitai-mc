@@ -46,6 +46,7 @@ jobs:
     permissions:
       pull-requests: write
     env:
+      TF_TOKEN_app_terraform_io: ${{ secrets.TFCLOUD_TOKEN }}
       TF_VAR_hcloud_token: ${{ secrets.HCLOUD_TOKEN }}
       TF_VAR_public_ssh_key: ${{ secrets.PUBLIC_SSH_KEY }}
       TF_VAR_private_ssh_key: ${{ secrets.PRIVATE_SSH_KEY }}

@@ -1,24 +1,20 @@
 <div align = center>
 
-# Aitai MC Server
+# Terraform MC Server
 
 [![Badge CD]][CD]
 [![Badge CI]][CI]
 [![Badge Nix]][Nix]
 [![Badge X]][Follow X]
 
-_aitai - Japanese for "I miss you" / "I want to see you"_
-
 </div>
-
----
 
 > [!NOTE]
 > This is a hobbiest project for brushing up on my Terraform. I am extremely aware that this is overkill.
 
 This is a Minecraft server running vanilla 1.21.10 deployed and provisioned on [Hetzner](https://hetzner.com) using [Terraform](https://developer.hashicorp.com/terraform).
 
-This server is specifically meant for my [boyfriend](https://github.com/jlevere) and I to play on; however, I attempted to build the IaC in a way that can be reused and easily modified for different Minecraft packs or versions.
+The IaC is configured to use Terraform Cloud as the remote backend to hold state, but the actual CD occurs on a GitHub Actions runner.
 
 I would like to give a shoutout to [flytegg/mc-utils](https://github.com/flytegg/mc-utils). This website enabled me to essentially bypass the shaky server.jar download from the official Minecraft website.
 
